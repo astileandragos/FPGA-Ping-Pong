@@ -7,12 +7,12 @@ entity clk_divider is
 end clk_divider;
 
 architecture Behavioral of clk_divider is
-    signal count : integer range 0 to 9999999 := 0;
+    signal count : integer range 0 to 19999999 := 0;
 begin
     process(clk)
     begin
         if rising_edge(clk) then
-            if count = 9999999 then
+            if count = 19999999 then
                 count <= 0;
                 tick_out <= '1';
             else
